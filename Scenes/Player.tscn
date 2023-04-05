@@ -51,6 +51,7 @@ shape = SubResource( 3 )
 position = Vector2( 0, -28 )
 frames = SubResource( 4 )
 animation = "run"
+frame = 1
 playing = true
 
 [node name="PickupArea" type="Area2D" parent="."]
@@ -62,9 +63,14 @@ position = Vector2( 0, -29 )
 shape = SubResource( 5 )
 
 [node name="HazardArea" type="Area2D" parent="."]
-collision_layer = 262144
+collision_layer = 262145
 collision_mask = 262144
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HazardArea"]
 position = Vector2( 0, -26 )
 shape = SubResource( 6 )
+
+[node name="DamageTimer" type="Timer" parent="."]
+wait_time = 0.1
+
+[connection signal="timeout" from="DamageTimer" to="." method="_on_DamageTimer_timeout"]

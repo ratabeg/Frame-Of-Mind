@@ -1,3 +1,8 @@
+
+# Mingpei Dou, Raouf Atabeg, Jordi Cochegrus, Adam Salamayeh, Ishaan Kumar
+# CS4483 Katchabaw
+# 2 Mar 2023
+
 extends Node2D
 
 func _ready():
